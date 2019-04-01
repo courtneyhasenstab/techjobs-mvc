@@ -50,7 +50,7 @@ public class ListController {
             int numResult = items.size();
             String results = numResult + " Result(s)";
             model.addAttribute("results", results);
-            model.addAttribute("title", "All " + columnChoices.get(column) + " Values");
+            model.addAttribute("title", String.format("All %ss ", columnChoices.get(column)));
             model.addAttribute("column", column);
             model.addAttribute("items", items);
             return "list-column";
